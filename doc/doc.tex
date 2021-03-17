@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[left=2cm, top=2cm, text={17cm, 24cm}]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[unicode]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\hypersetup{colorlinks = true, hypertexnames = false}
+\pagenumbering{gobble}
+
+\begin{document}
+	\noindent{\Huge IZV Projekt část 3.3}\\
+	
+	\noindent{\Large Autor: Martin Kostelník (xkoste12)\\Datum: \today}
+	\vspace{1em}
+	
+	Tento dokument se zabývá analýzou počtu dopravních nehod v závislosti na počasí. Sledujeme pouze nehody v letech 2016 až 2020. Během tohoto období nastalo celkem $487161$ dopravních nehod.
+	
+	V grafu \ref{figure:graph} si můžeme všimnout, že nejvíce nehod nastává při nezatíženém počasí. To je ovšem způsobeno tím, že jiné povětrnostní podmínky nastávají jen zřídka. Zajímavější je, že nehod při sněžení nebo náledí je poměrně velké množství (tvoří $2.78$ \% všech nehod), i když se tyto podmínky příliš nevyskytují.
+	
+	\begin{figure}[H]
+		\caption{Počet nehod v závislosti na počasí}
+		\label{figure:graph}
+		\centering
+		\includegraphics[scale=0.55]{fig.pdf}
+	\end{figure}
+
+	Tabulka \ref{figure:table} obsahuje počty nehod během jednotlivých let. Menší čísla v roce 2020 jsou způsobeny tím, že máme k dispozici data z prvních devíti měsíců. Při ztížených podmínkách došlo k $57278$ nehodám. Naopak při neztížených podmínkách došlo k $429883$ nehodám.
+	
+	\begin{figure}[H]
+		\caption{Počet nehod v jednotlivých letech}
+		\label{figure:table}
+		\begin{center}	
+			\begin{tabular}{ |c|c|c|c|c|c|c|c|c| }
+				\hline
+				Rok & Jiné & Nezatížené & Mlha & Slabý déšť & Déšť & Sněžení & Náledí & Nárazový vítr \\
+				\hline
+				2016 & 237 & 85627 & 836 & 3802 & 4959 & 2025 & 1303 & 74 \\
+				\hline
+				2017 & 235 & 90286 & 866 & 3551 & 5016 & 2196 & 1442 & 233 \\
+				\hline
+				2018 & 209 & 93882 & 677 & 3296 & 3545 & 2024 & 1012 & 119 \\
+				\hline
+				2019 & 222 & 95673 & 833 & 3558 & 4418 & 1768 & 943 & 157 \\
+				\hline
+				2020 & 119 & 64415 & 363 & 2329 & 3941 & 406 & 437 & 127 \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{figure}
+\end{document}
